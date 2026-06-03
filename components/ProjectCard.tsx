@@ -2,19 +2,21 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4 }}
-      whileHover={{ y: -4 }}
-      className="group rounded-xl border border-zinc-200 bg-white p-6 transition-colors hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700"
-    >
+    <Link href={`/projects/${project.slug}`}>
+      <motion.div
+        layout
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.4 }}
+        whileHover={{ y: -4 }}
+        className="group rounded-xl border border-zinc-200 bg-white p-6 transition-colors hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700"
+      >
       {project.image && (
         <div className="relative mb-4 aspect-video overflow-hidden rounded-lg">
           <Image
@@ -63,5 +65,6 @@ export default function ProjectCard({ project }: { project: Project }) {
         )}
       </div>
     </motion.div>
+    </Link>
   );
 }

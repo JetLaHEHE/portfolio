@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.vercel.app"),
+  metadataBase: new URL("https://jetagatep.dev"),
   title: "John Jethro Agatep | Portfolio",
   description:
     "Full-stack developer portfolio showcasing projects and skills.",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     title: "John Jethro Agatep | Portfolio",
     description:
       "Full-stack developer building modern web applications with Next.js, TypeScript, and Node.js.",
-    url: "https://your-domain.vercel.app",
+    url: "https://jetagatep.dev",
     siteName: "John Jethro Agatep",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image",
         width: 1200,
         height: 630,
       },

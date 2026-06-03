@@ -57,8 +57,7 @@ export default function About() {
               })}
             </div>
           </div>
-          {/* Resume download — uncomment when resume.pdf is ready */}
-          {/* <div className="mt-8">
+          <div className="mt-8">
             <a
               href="/resume.pdf"
               target="_blank"
@@ -78,7 +77,7 @@ export default function About() {
               </svg>
               Download Resume (PDF)
             </a>
-          </div> */}
+          </div>
         </motion.div>
       </div>
     </section>
